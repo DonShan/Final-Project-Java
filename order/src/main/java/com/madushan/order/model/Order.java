@@ -3,46 +3,40 @@ package com.madushan.order.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "order")
 public class Order {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String orderName;
-    private String orderPrice;
-
-    public Order(int id, String orderName, String orderPrice) {
-        this.id = id;
-        this.orderName = orderName;
-        this.orderPrice = orderPrice;
-    }
+    private Integer id;
+    private String ordername;
+    private String orderprice;
 
     public Order(){
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getOrderName() {
-        return orderName;
+    public String getOrdername() {
+        return ordername;
     }
 
-    public void setOrderName(String orderName) {
-        this.orderName = orderName;
+    public void setOrdername(String ordername) {
+        this.ordername = ordername;
     }
 
-    public String getOrderPrice() {
-        return orderPrice;
+    public String getOrderprice() {
+        return orderprice;
     }
 
-    public void setOrderPrice(String orderPrice) {
-        this.orderPrice = orderPrice;
+    public void setOrderprice(String orderprice) {
+        this.orderprice = orderprice;
     }
-
 }

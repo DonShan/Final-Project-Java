@@ -1,9 +1,8 @@
 server:
   port: 4040
-
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/Order_details?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/orderdetailsDB?createDatabaseIfNotExist=true
     username: root
     password: shan1234
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,5 +11,4 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-        ddl-auto: create-drop
-
+      ddl-auto: create-drop

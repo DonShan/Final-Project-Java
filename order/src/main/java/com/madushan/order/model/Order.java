@@ -3,7 +3,7 @@ package com.madushan.order.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orderdetail")
 public class Order {
     
     @Id

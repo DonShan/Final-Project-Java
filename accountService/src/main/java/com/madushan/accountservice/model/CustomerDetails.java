@@ -9,7 +9,6 @@ public class CustomerDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int id;
     private String customerName;
     private String email;

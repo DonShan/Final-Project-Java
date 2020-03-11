@@ -10,4 +10,6 @@ public interface OrderService {
     Order save(Order order);
 
     Optional<Order> findById(Integer orderId);
+
+    Order findByOrdername(String name);
 }

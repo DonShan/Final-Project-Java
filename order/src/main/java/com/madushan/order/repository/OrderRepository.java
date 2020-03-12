@@ -8,4 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 
    Order findByOrdername(String oderName);
+
+   Order findByiD(Integer orderNo);
+
 }

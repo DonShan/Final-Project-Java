@@ -5,6 +5,8 @@ import com.madushan.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/order")
 public class OrderController {
@@ -22,8 +24,13 @@ public class OrderController {
         return orderService.save(order);
     }
 
-    @GetMapping(value = "/ordername/{name}")
-    public Order getByName(@PathVariable String name) {
-        return orderService.findByOrdername(name);
+    @RequestMapping(value = "find/{OrderId}")
+    public Optional<Order> findById(@PathVariable int OrderId){
+        return orderService.FinById(OrderId);
+    }
+    @RequestMapping(value = "/ordername", method = RequestMethod.GET)
+    public Order getByName(@PathVariable String oderName) {
+
+        return orderService.findByOrdername(oderName);
     }
 }

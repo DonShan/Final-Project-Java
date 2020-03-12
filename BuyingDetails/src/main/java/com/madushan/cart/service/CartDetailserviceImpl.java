@@ -14,4 +14,9 @@ public class CartDetailserviceImpl implements CartDetailsService {
     public CartDetails save(CartDetails cartDetails){
         return cartDetailsRepository.save(cartDetails);
     }
+
+    @Override
+    public CartDetails finsByName(int cartDetails) {
+        return null;
+    }
 }

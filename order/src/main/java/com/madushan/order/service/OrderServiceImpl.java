@@ -19,11 +19,13 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Optional<Order> findById(Integer orderId) {
-        return orderRepository.findById(orderId);
+    public Optional<Order> FinById(Integer OrderId) {
+        return  orderRepository.findById(OrderId);
     }
+
 
     public Order findByOrdername(String orderName){
         return orderRepository.findByOrdername(orderName);
   }
+
 }

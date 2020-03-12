@@ -3,12 +3,9 @@ package com.madushan.accountservice.controller;
 import com.madushan.accountservice.model.CustomerDetails;
 import com.madushan.accountservice.service.CustomerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/customer")
@@ -23,12 +20,15 @@ public class MainController {
         return "Hello world";
     }
 
-
     @RequestMapping(value = "/CustomerDetails", method = RequestMethod.POST)
     public CustomerDetails save(@RequestBody CustomerDetails customerDetails){
 
         return  customerDetailsService.save(customerDetails);
     }
 
+    @RequestMapping(value = "/customer/{id}", method = RequestMethod.GET)
+    public Optional<CustomerDetails> findById(@PathVariable Integer id){
 
+        return customerDetailsService.findById(id);
+    }
 }

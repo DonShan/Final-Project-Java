@@ -9,7 +9,7 @@ public interface OrderService {
 
     Order save(Order order);
 
-    Optional<Order> findById(Integer orderId);
+    Optional<Order> FinById(Integer OrderId);
 
     Order findByOrdername(String name);
 }

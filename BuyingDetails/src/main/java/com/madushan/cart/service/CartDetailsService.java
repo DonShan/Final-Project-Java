@@ -5,4 +5,6 @@ import com.madushan.cart.model.CartDetails;
 public interface CartDetailsService {
 
     CartDetails save(CartDetails cartDetails);
+
+    CartDetails finsByName(int cartDetails);
 }

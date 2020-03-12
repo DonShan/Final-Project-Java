@@ -11,8 +11,4 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-<<<<<<< HEAD
       ddl-auto: update
-=======
-      ddl-auto: create
->>>>>>> c18dfea47abcea75a4194587390abdad8369f5b0

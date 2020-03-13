@@ -1,17 +1,19 @@
 package com.madushan.accountservice.service;
 
+import com.madushan.accountservice.model.APIResponse;
 import com.madushan.accountservice.model.CustomerDetails;
 
 import java.util.Optional;
 
 public interface CustomerDetailsService {
 
-    CustomerDetails save(CustomerDetails customerDetails);
+  CustomerDetails save(CustomerDetails customerDetails);
 
-    Optional<CustomerDetails> findById(Integer id);
+  Optional<CustomerDetails> findById(Integer id);
 
-    CustomerDetails findByCustomerName(String Name);
+  CustomerDetails findByCustomerName(String Name);
 
-    CustomerDetails findByEmail(String Email);
+  CustomerDetails findByEmail(String Email);
 
+  APIResponse customerLogin(String username, String password);
 }

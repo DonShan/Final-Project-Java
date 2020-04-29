@@ -1,5 +1,5 @@
 server:
-  port: 4141
+  port: 4140
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/Order_Details?createDatabaseIfNotExist=true

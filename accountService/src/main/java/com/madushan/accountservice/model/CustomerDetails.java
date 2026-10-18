@@ -1,7 +1,8 @@
 package com.madushan.accountservice.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "customer_details")
@@ -12,6 +13,7 @@ public class CustomerDetails {
     private int id;
     private String customerName;
     private String email;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private  String password;
 
     //map one to one relationship with customer address

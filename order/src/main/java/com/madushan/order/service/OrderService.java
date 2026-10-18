@@ -2,6 +2,7 @@ package com.madushan.order.service;
 
 import com.madushan.order.model.Order;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -12,4 +13,8 @@ public interface OrderService {
     Optional<Order> FinById(Integer OrderId);
 
     Order findByOrdername(String name);
+
+    List<Order> findAll();
+
+    void deleteById(Integer orderId);
 }

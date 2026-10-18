@@ -16,3 +16,4 @@ spring:
 authserver:
   clientid: mobile
   clientsecret: pass
+  url: http://localhost:9191/oauth/token

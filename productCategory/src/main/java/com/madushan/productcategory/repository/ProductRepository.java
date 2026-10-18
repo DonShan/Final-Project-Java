@@ -4,9 +4,11 @@ import com.madushan.productcategory.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
     Product findByProductname(String productName);
 
-    Product findByPrice(Integer price);
+    List<Product> findByPrice(Integer price);
 }

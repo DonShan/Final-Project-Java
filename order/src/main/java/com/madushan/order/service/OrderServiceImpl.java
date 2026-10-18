@@ -5,6 +5,7 @@ import com.madushan.order.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -28,5 +29,15 @@ public class OrderServiceImpl implements OrderService {
     public Order findByOrdername(String orderName){
         return orderRepository.findByOrdername(orderName);
   }
+
+    @Override
+    public List<Order> findAll() {
+        return orderRepository.findAll();
+    }
+
+    @Override
+    public void deleteById(Integer orderId) {
+        orderRepository.deleteById(orderId);
+    }
 
 }

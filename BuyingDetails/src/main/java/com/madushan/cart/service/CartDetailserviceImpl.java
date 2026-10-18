@@ -5,6 +5,9 @@ import com.madushan.cart.repository.CartDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class CartDetailserviceImpl implements CartDetailsService {
 
@@ -16,7 +19,17 @@ public class CartDetailserviceImpl implements CartDetailsService {
     }
 
     @Override
-    public CartDetails finsByName(int cartDetails) {
-        return null;
+    public Optional<CartDetails> findById(int id) {
+        return cartDetailsRepository.findById(id);
+    }
+
+    @Override
+    public List<CartDetails> findAll() {
+        return cartDetailsRepository.findAll();
+    }
+
+    @Override
+    public void deleteById(int id) {
+        cartDetailsRepository.deleteById(id);
     }
 }
